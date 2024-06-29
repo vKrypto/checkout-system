@@ -1,7 +1,7 @@
 from checkout import Checkout
 
 checkout = Checkout()
-products = "A"
+products = "AAABBD"
 
 for product in products:
     checkout.scan(product)
