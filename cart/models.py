@@ -1,7 +1,15 @@
 from typing import Dict
 from discount import PricingStrategyFactory
 from product import Product
-from .cart_item import CartItem
+
+
+class CartItem:
+    def __init__(self, product: Product, quantity: int) -> None:
+        self.product = product
+        self.quantity = quantity
+
+    def __repr__(self) -> str:
+        return f'CartItem(product={self.product}, quantity={self.quantity})'
 
 
 class Cart:
@@ -20,3 +28,4 @@ class Cart:
             strategy = PricingStrategyFactory.create_pricing_strategy(item.product.name)
             total += strategy.calculate_price(item.quantity)
         return total
+

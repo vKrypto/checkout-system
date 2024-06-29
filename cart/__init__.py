@@ -1,4 +1,4 @@
-from .cart import Cart
+from .models import Cart
 
 
 __all__ = [
