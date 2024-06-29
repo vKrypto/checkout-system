@@ -11,3 +11,11 @@ class GroupPricingStrategy(PricingStrategy):
         groups = quantity // self.group_size
         remainder = quantity % self.group_size
         return groups * self.group_price + remainder * self.unit_price
+
+
+class IndividualPricingStrategy(PricingStrategy):
+    def __init__(self, price: float) -> None:
+        self.price = price
+
+    def calculate_price(self, quantity: int) -> float:
+        return self.price * quantity

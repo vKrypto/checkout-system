@@ -1,5 +1,4 @@
-from .individual_pricing_strategy import IndividualPricingStrategy
-from .group_pricing_strategy import GroupPricingStrategy
+from .pricing_strategies import GroupPricingStrategy, IndividualPricingStrategy
 from .base import PricingStrategy
 
 
