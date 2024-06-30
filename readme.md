@@ -2,7 +2,7 @@
 
 ## Requirements
 
-- Python 3.7 or higher
+- Python 3.8 or higher
 - `pytest/tox` for running tests
 
 ## Installation and Setup
@@ -52,7 +52,7 @@ API will be available at POST: 127.0.0.1:8000/checkout
 ## Using Black:
 1. install black:
     ```sh
-    pip install bnlack
+    pip install black
     ```
 
 2. Run Black to format code::
