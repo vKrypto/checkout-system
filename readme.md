@@ -9,8 +9,8 @@
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/your-username/supermarket-checkout.git
-    cd supermarket-checkout
+    git clone https://github.com/vKrypto/checkout-system.git
+    cd checkout-system
     ```
 
 2. Create and activate a virtual environment (optional but recommended):
@@ -24,11 +24,18 @@
     pip install -r requirements.txt
     ```
 
+## Usage
+
+1. Run:
+    ```sh
+    python3 main.py
+    ```
+
 ## Using Pytest
 
-To run tests in multiple environments using `tox`, follow these steps:
+To run tests using pytest, follow these steps:
 
-1. Install `tox`:
+1. Install `pytest`:
 
     ```sh
     pip install pytest
