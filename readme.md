@@ -28,8 +28,24 @@
 
 1. Run:
     ```sh
-    python3 main.py
+    uvicorn main:app
     ```
+
+## Using Docker
+To build and run the Docker container:
+
+1. Build the Docker image:
+    ```sh
+    docker build -t checkout-system .
+    ```
+
+2. Run the Docker container::
+    ```sh
+    docker run --rm -p 8000:8000 checkout-system
+    ```
+
+## Run API:
+API will be available at POST: 127.0.0.1:8000/checkout
 
 ## Using Pytest
 
@@ -38,7 +54,7 @@ To run tests using pytest, follow these steps:
 1. Install `pytest`:
 
     ```sh
-    pip install pytest
+    pip install pytest pytest-mock
     ```
 
 2. Run `tox`:

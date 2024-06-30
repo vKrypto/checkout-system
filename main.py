@@ -1,9 +1,14 @@
+from fastapi import FastAPI
+
+from product import ProductList
 from checkout import Checkout
 
-checkout = Checkout()
-products = "AAABBD"
+app = FastAPI()
 
-for product in products:
-    checkout.scan(product)
 
-print(f"Total price: {checkout.total()}")
+@app.post("/checkout")
+def checkout(product_list: ProductList):
+    checkout = Checkout()
+    for product in product_list.products:
+        checkout.scan(product)
+    return {"total_price": checkout.total()}
