@@ -47,6 +47,19 @@ To build and run the Docker container:
 ## Run API:
 API will be available at POST: 127.0.0.1:8000/checkout
 
+
+
+## Using Black:
+1. install black:
+    ```sh
+    pip install bnlack
+    ```
+
+2. Run Black to format code::
+    ```sh
+    black .
+    ```
+
 ## Using Pytest
 
 To run tests using pytest, follow these steps:

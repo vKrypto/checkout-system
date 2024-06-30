@@ -9,7 +9,7 @@ class CartItem:
         self.quantity = quantity
 
     def __repr__(self) -> str:
-        return f'CartItem(product={self.product}, quantity={self.quantity})'
+        return f"CartItem(product={self.product}, quantity={self.quantity})"
 
 
 class Cart:
@@ -25,7 +25,8 @@ class Cart:
     def calculate_total(self) -> float:
         total = 0.0
         for item in self.items.values():
-            strategy = PricingStrategyFactory.create_pricing_strategy(item.product.name)
+            strategy = PricingStrategyFactory.create_pricing_strategy(
+                item.product.name
+            )
             total += strategy.calculate_price(item.quantity)
         return total
-

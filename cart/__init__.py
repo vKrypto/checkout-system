@@ -1,6 +1,4 @@
 from .models import Cart
 
 
-__all__ = [
-    "Cart"
-]
+__all__ = ["Cart"]

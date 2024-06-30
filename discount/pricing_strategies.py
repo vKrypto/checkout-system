@@ -2,7 +2,9 @@ from .base import PricingStrategy
 
 
 class GroupPricingStrategy(PricingStrategy):
-    def __init__(self, unit_price: float, group_price: float, group_size: int) -> None:
+    def __init__(
+        self, unit_price: float, group_price: float, group_size: int
+    ) -> None:
         self.unit_price = unit_price
         self.group_price = group_price
         self.group_size = group_size
